@@ -371,6 +371,13 @@ img{
 .wrap-slider-infomation .flex-control-nav{
 	bottom: 10px;
 }
+.slider_pic_control{
+	margin: 0;
+}
+.slider_pic_control .flex-control-nav{
+	bottom: -70px;
+	text-align: right;
+}
 /*===Grid View Default General===*/
 .list-grid-view{
 	-ms-flex-wrap: wrap;
@@ -388,15 +395,12 @@ img{
             flex-direction: column;
     border: 1px solid #e5e5e5;
     margin: 0 0 -1px -1px;
+    padding-bottom: 25px;
 }
 
 /* slider ranking */
 .slider-ranking{
 	border: none;
-}
-
-.list-grid-view .grid-view-item a{
-	display: block;
 }
 .list-grid-view .grid-view-item .image{
 	position: relative;
