@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Slider - Range slider</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/font-icon.css">
+    <script>
+    $( function() {
+        $("#sliderRangeWargo").slider({
+            range   : true,
+            min     : 0,
+            max     : 500,
+            values  : [75, 300],
+            slide   : function(event, ui) {
+                $("#minPrice").text("\\" + ui.values[0]);
+                $("#maxPrice").text("\\" + ui.values[1]);
+            }
+        });
+
+        //init value
+        $("#minPrice").text("\\" + $("#sliderRangeWargo").slider("values", 0));
+        $("#maxPrice").text("\\" + $("#sliderRangeWargo").slider("values", 1));
+    });
+    </script>
+
+    <style type="text/css">
+        .wrap-slider-range .range-price{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .wrap-slider-range .price{
+            width: 80px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border: 1px solid #e3e3e3;
+            padding: 0 5px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            color: #707070;
+            font-size: 15px;
+        }
+        .wrap-slider-range .ui-slider-horizontal{
+            height: 5px;
+            background: #e3e3e3;
+            border: none;
+            border-radius: inherit;
+        }
+        .wrap-slider-range .ui-slider-horizontal .ui-slider-handle{
+            top: -14px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            outline: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="wrap-slider-range">
+    <div class="range-price">
+        <div id="minPrice" class="price min-price"></div>
+        <div id="maxPrice" class="price max-price"></div>
+    </div>
+    <div id="sliderRangeWargo" class="slider-range-wargo"></div>
+</div>
+
+</body>
+</html>
