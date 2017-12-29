@@ -18,7 +18,7 @@ $(document).ready(function() {
     
 
     /* List view and Grid view show */
-    $('.des-text-info').hide();
+
     $("[data-view]").click(function() {
         var target = $(this).data("view");
         $(this).find('.icon').toggleClass('icon-wargo-grid-view icon-wargo-list-view');
@@ -26,12 +26,6 @@ $(document).ready(function() {
 
         $('#sliderPicControl').data('flexslider').resize();
         $('#sliderPicControl').data('flexslider').resize();
-
-        if($(target).find('li').hasClass('list-view-item-filter')){
-            $('.des-text-info').show();
-        }else{
-            $('.des-text-info').hide();
-        }
     });
 
 
@@ -129,7 +123,17 @@ $(document).ready(function() {
             slideshow:true,
             useCSS:false,
             minItems:minItemsPicControl,
-            maxItems:maxItemsPicControl
+            maxItems:maxItemsPicControl,
+            start: function(slider){
+                $('#sliderPicControl').find(".flex-active").parent().addClass("active");
+            },
+            before: function(slider){
+                $('#sliderPicControl').find(".flex-active").parent().siblings().removeClass("active");
+            },
+            after: function(slider){
+                $('#sliderPicControl').find(".flex-active").parent().addClass("active");
+                $('#sliderPicControl').find(".flex-active").parent().siblings().removeClass("active");
+            }
         });
     };
     var timer_metaslider_pic_control = function() {
