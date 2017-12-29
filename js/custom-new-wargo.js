@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	
-	/*  range slider */
+    
+    /*  range slider */
     $("#sliderRangeWargo").slider({
         range   : true,
         min     : 0,
@@ -17,21 +17,25 @@ $(document).ready(function() {
     $("#maxPrice").text("\\" + $("#sliderRangeWargo").slider("values", 1));
     
 
-    /* data view */
+    /* List view and Grid view show */
     $('.des-text-info').hide();
-	$("[data-view]").click(function() {
+    $("[data-view]").click(function() {
         var target = $(this).data("view");
         $(this).find('.icon').toggleClass('icon-wargo-grid-view icon-wargo-list-view');
         $(target).find('li').toggleClass('list-view-item list-view-item-filter');
+
+        $('#sliderPicControl').data('flexslider').resize();
+        $('#sliderPicControl').data('flexslider').resize();
+
         if($(target).find('li').hasClass('list-view-item-filter')){
-        	$('.des-text-info').show();
+            $('.des-text-info').show();
         }else{
-        	$('.des-text-info').hide();
+            $('.des-text-info').hide();
         }
-	});
+    });
 
 
-	/* Begin: slider top banner */
+    /* Begin: slider top banner */
     var slider_wargo_top = function($) {
         $('#wrapSliderBannerTop, #wrapSliderInfomation').flexslider({
             slideshowSpeed:3000,
@@ -57,11 +61,10 @@ $(document).ready(function() {
     /* End: slider top banner */
 
     /* Begin: slider ranking */
-
-    var itemWidthRanking 		= 123;
-    var itemMarginWidthRanking 	= 0;
-    var minItemsRanking 		= 3;
-    var maxItemsRanking 		= 3;
+    var itemWidthRanking        = 123;
+    var itemMarginWidthRanking  = 0;
+    var minItemsRanking         = 3;
+    var maxItemsRanking         = 3;
     if(typeof mobile === 'number' && mobile === 1) {
         minItemsRanking = 3;
         maxItemsRanking = 3;
@@ -97,6 +100,43 @@ $(document).ready(function() {
     };
     timer_metaslider_ranking();
     /* End: slider ranking */
+
+    /* Begin: slider pic control */
+    var itemWidthPicControl        = 124;
+    var itemMarginWidthPicControl  = 0;
+    var minItemsPicControl         = 1;
+    var maxItemsPicControl         = 1;
+    if(typeof mobile === 'number' && mobile === 1) {
+        minItemsPicControl = 1;
+        maxItemsPicControl = 1;
+    }
+
+    var pic_control_slider = function($) {
+        $('#sliderPicControl').flexslider({
+            slideshowSpeed:6000,
+            animationSpeed:400,
+            animation:"slide",
+            itemWidth: itemWidthPicControl,
+            itemMargin: itemMarginWidthPicControl,
+            controlNav:true,
+            directionNav:true,
+            pauseOnHover:false,
+            direction:"horizontal",
+            reverse:false,
+            prevText:" ",
+            nextText:" ",
+            easing:"linear",
+            slideshow:true,
+            useCSS:false,
+            minItems:minItemsPicControl,
+            maxItems:maxItemsPicControl
+        });
+    };
+    var timer_metaslider_pic_control = function() {
+        !window.jQuery ? window.setTimeout(timer_metaslider_pic_control, 100) : !jQuery.isReady ? window.setTimeout(timer_metaslider_pic_control, 100) : pic_control_slider(window.jQuery);
+    };
+    timer_metaslider_pic_control();
+    /* End: slider pic control */
 
     /* Begin: Fixed Top Header */
     $(window).on('scroll', function(){
