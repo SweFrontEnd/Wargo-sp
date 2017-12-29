@@ -279,6 +279,7 @@ img{
 }
 .list-icon-cate .icon-cate-item .icon{
 	font-size: 30px;
+	font-size: 8vw;
 }
 .list-icon-cate .icon-cate-item.active{
 	background-color: #eab045;
