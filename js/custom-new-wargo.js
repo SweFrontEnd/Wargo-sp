@@ -84,15 +84,12 @@ $(document).ready(function() {
             minItems:minItemsRanking,
             maxItems:maxItemsRanking,
             start: function(slider){
-                // var $item = $(slider).find('.grid-view-item');
-                // $item.css('width', $item.width() + 2);
-                $('.grid-view-item').width(itemWidthRanking);
-            },
-            after: function(slider){
-                $('.grid-view-item').width(itemWidthRanking);
+                var $item = $(slider).find('.grid-view-item');
+                $item.css('width', $item.width() + 2);
             }
         });
     };
+    
     var timer_metaslider_ranking = function() {
         !window.jQuery ? window.setTimeout(timer_metaslider_ranking, 100) : !jQuery.isReady ? window.setTimeout(timer_metaslider_ranking, 100) : ranking_slider(window.jQuery);
     };
