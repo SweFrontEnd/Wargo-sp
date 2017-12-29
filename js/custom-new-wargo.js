@@ -55,7 +55,7 @@ $(document).ready(function() {
     /* End: slider top banner */
 
     /* Begin: slider ranking */
-    var itemWidthRanking        = 123;
+    var itemWidthRanking        = 125;
     var itemMarginWidthRanking  = 0;
     var minItemsRanking         = 3;
     var maxItemsRanking         = 3;
@@ -84,8 +84,12 @@ $(document).ready(function() {
             minItems:minItemsRanking,
             maxItems:maxItemsRanking,
             start: function(slider){
-                var $item = $(slider).find('.grid-view-item');
-                $item.css('width', $item.width()+2);
+                // var $item = $(slider).find('.grid-view-item');
+                // $item.css('width', $item.width() + 2);
+                $('.grid-view-item').width(itemWidthRanking);
+            },
+            after: function(slider){
+                $('.grid-view-item').width(itemWidthRanking);
             }
         });
     };

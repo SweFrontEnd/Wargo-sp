@@ -34,9 +34,9 @@ img{
 	        box-sizing: border-box;
 }
 .flexbox{
-	display: -webkit-box;
-	display: flex;
-	display: -ms-flexbox;
+	display: -webkit-box !important;
+	display: flex !important;
+	display: -ms-flexbox !important;
 }
 .align-items-center{
 	-webkit-box-align: center;
@@ -347,6 +347,9 @@ img{
 .flexslider-wargo .flex-control-nav li{
 	margin: 0 4px;
 }
+.flexslider-wargo .flex-direction-nav a{
+	top: 35%;
+}
 .flexslider-wargo .flex-control-paging li a,
 .flexslider-wargo .flex-control-paging li a:hover{
 	width: 7px;
@@ -436,7 +439,7 @@ img{
 .list-grid-view .list-view-item .status{
 	display: block;
 	position: absolute;
-    left: 145px;
+    right: 50%;
     bottom: 8px;
     padding-right: 5px;
     text-align: right;
@@ -991,4 +994,10 @@ img{
 .wrap-copyright{
 	color: #707070;
 	font-size:  11px;
+}
+@media (max-width: 360px){
+	.slider_pic_control .flex-control-nav {
+	    bottom: -80px;
+	}
+
 }
