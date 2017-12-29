@@ -23,9 +23,12 @@ $(document).ready(function() {
         var target = $(this).data("view");
         $(this).find('.icon').toggleClass('icon-wargo-grid-view icon-wargo-list-view');
         $(target).find('li').toggleClass('list-view-item list-view-item-filter');
-
-        $('#sliderPicControl').data('flexslider').resize();
-        $('#sliderPicControl').data('flexslider').resize();
+        var $flexslider = $(target).find('.flexslider');
+        if($flexslider.length){
+            $flexslider.data('flexslider').resize();
+            $flexslider.data('flexslider').resize();
+        }
+        
     });
 
 
