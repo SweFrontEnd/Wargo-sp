@@ -70,7 +70,8 @@ $(document).ready(function() {
             prevText        : "",
             nextText        : "",
             minItems        : 3,
-            maxItems        : 3
+            maxItems        : 3,
+            useCSS          : false
         });
     };
     var timer_metaslider_ranking = function() {
