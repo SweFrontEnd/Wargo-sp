@@ -350,6 +350,9 @@ img{
 .flexslider-wargo .flex-direction-nav a{
 	top: 35%;
 }
+.slider_pic_control .flex-direction-nav a{
+	top: 50%;
+}
 .flexslider-wargo .flex-control-paging li a,
 .flexslider-wargo .flex-control-paging li a:hover{
 	width: 7px;
@@ -429,9 +432,11 @@ img{
         -ms-flex-direction: column;
             flex-direction: column;
     border: 1px solid #e5e5e5;
-    margin: 0 0 -1px -1px;
     padding-bottom: 25px;
     position: relative;
+}
+.list-grid-view.no-slider .grid-view-item{
+	margin: 0 -1px -1px 0;
 }
 .list-grid-view .grid-view-item .status{
 	display: none;

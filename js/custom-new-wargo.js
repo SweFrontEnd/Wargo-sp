@@ -73,7 +73,7 @@ $(document).ready(function() {
             animationSpeed  : 400,
             animation       : "slide",
             itemWidth       : 125,
-            itemMargin      : 0,
+            itemMargin      : -1,
             controlNav      : false,
             directionNav    : true,
             pauseOnHover    : false,
@@ -85,12 +85,7 @@ $(document).ready(function() {
             slideshow       : true,
             useCSS          : false,
             minItems        : 3,
-            maxItems        : 3,
-            start: function(slider){
-                var $item = $(slider).find('.grid-view-item');
-                $item.css('width', $item.width() + 2);
-                // $('#sliderArrival').data('flexslider').resize();
-            }
+            maxItems        : 3
         });
     };
     var timer_metaslider_ranking = function() {
