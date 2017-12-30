@@ -41,20 +41,12 @@ $(document).ready(function() {
     =============================================================*/
     var slider_wargo_top = function($) {
         $('#wrapSliderBannerTop, #wrapSliderInfomation').flexslider({
-            slideshowSpeed  : 3000,
+            slideshowSpeed  : 4000,
             animationSpeed  : 400,
             animation       : "slide",
-            controlNav      : true,
             directionNav    : false,
-            pauseOnHover    : true,
-            direction       : "horizontal",
-            reverse         : false,
             prevText        : "",
-            nextText        : "",
-            easing          : "linear",
-            slideshow       : true,
-            useCSS          : false,
-            initDelay       : 2000
+            nextText        : ""
         });
     };
     var timer_metaslider_wargo_top = function() {
@@ -69,21 +61,14 @@ $(document).ready(function() {
     =============================================================*/
     var ranking_slider = function($) {
         $('#sliderRanking, #sliderArrival').flexslider({
-            slideshowSpeed  : 6000,
+            slideshowSpeed  : 4000,
             animationSpeed  : 400,
             animation       : "slide",
             itemWidth       : 125,
             itemMargin      : -1,
             controlNav      : false,
-            directionNav    : true,
-            pauseOnHover    : false,
-            direction       : "horizontal",
-            reverse         : false,
             prevText        : "",
             nextText        : "",
-            easing          : "linear",
-            slideshow       : true,
-            useCSS          : false,
             minItems        : 3,
             maxItems        : 3
         });
@@ -100,21 +85,13 @@ $(document).ready(function() {
     =============================================================*/
     var pic_control_slider = function($) {
         $('#sliderPicControl').flexslider({
-            slideshowSpeed  : 6000,
+            slideshowSpeed  : 4000,
             animationSpeed  : 400,
             animation       : "slide",
             itemWidth       : 125,
             itemMargin      : 0,
-            controlNav      : true,
-            directionNav    : true,
-            pauseOnHover    : false,
-            direction       : "horizontal",
-            reverse         : false,
             prevText        : "",
             nextText        : "",
-            easing          : "linear",
-            slideshow       : true,
-            useCSS          : false,
             minItems        : 1,
             maxItems        : 1,
             start: function(slider){
