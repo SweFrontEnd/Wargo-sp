@@ -117,8 +117,9 @@ $(document).ready(function() {
     /*===========================================================
         Header Fixed Top
     =============================================================*/
+    var topHeaderHight = $('.top-header').outerHeight();
     $(window).on('scroll', function(){
-        if($(this).scrollTop() > 50){
+        if($(this).scrollTop() > topHeaderHight){
             $('.top-header').addClass('fixed-top-header');
         }else{
             $('.top-header').removeClass('fixed-top-header');
