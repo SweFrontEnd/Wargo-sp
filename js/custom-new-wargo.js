@@ -82,14 +82,10 @@ $(document).ready(function() {
             slideshow:true,
             useCSS:false,
             minItems:minItemsRanking,
-            maxItems:maxItemsRanking,
-            start: function(slider){
-                var $item = $(slider).find('.grid-view-item');
-                $item.css('width', $item.width() + 2);
-            }
+            maxItems:maxItemsRanking
         });
     };
-    
+  
     var timer_metaslider_ranking = function() {
         !window.jQuery ? window.setTimeout(timer_metaslider_ranking, 100) : !jQuery.isReady ? window.setTimeout(timer_metaslider_ranking, 100) : ranking_slider(window.jQuery);
     };
