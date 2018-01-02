@@ -409,7 +409,7 @@ img{
     border: 1px solid #898989;
 }
 .list-view-item .slider_pic_control .flex-control-nav{
-	bottom: 5px;
+	bottom: 11px;
 	display: flex;
 }
 .list-view-item .slider_pic_control .flex-control-nav li{
@@ -438,6 +438,9 @@ img{
 .list-grid-view.no-slider .grid-view-item{
 	margin: 0 -1px -1px 0;
 }
+.list-grid-view.no-slider .list-view-item{
+	margin: 0 -1px 20px 0;
+}
 .list-grid-view .grid-view-item .status{
 	display: none;
 }
@@ -445,7 +448,7 @@ img{
 	display: block;
 	position: absolute;
     right: 50%;
-    bottom: 8px;
+    bottom: 12px;
     padding-right: 5px;
     text-align: right;
 }
@@ -711,6 +714,7 @@ img{
 /*===Box Filter===*/
 .wrap-box-filter{
 	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
 	padding: 13px 0 8px;
 	background-color: #fff;
 }
