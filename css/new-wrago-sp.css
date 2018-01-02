@@ -433,9 +433,6 @@ img{
             flex-direction: column;
     border: 1px solid #e5e5e5;
     padding-bottom: 25px;
-    position: relative;
-    margin-left: -1px;
-    margin-bottom: -1px;
 }
 .list-grid-view.no-slider .grid-view-item{
 	margin: 0 -1px -1px 0;
