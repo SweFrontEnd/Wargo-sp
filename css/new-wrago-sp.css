@@ -911,7 +911,8 @@ img{
 }
 /*===wrap-sb-menu-cate-bottom===*/
 .wrap-sb-menu-cate-bottom{
-	background-color: #1e1311; 
+	background-color: #1e1311;
+	padding-bottom: 50px; 
 }
 .list-sb-menu-cate-bt{
 	-webkit-box-orient: vertical;
