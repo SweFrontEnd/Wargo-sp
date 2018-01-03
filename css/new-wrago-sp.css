@@ -535,6 +535,10 @@ img{
 }
 .list-grid-view .grid-view-item .info .wishlist .icon-last{
 	margin-left: 5px;
+	display: none !important;
+}
+.list-grid-view .list-view-item .info .wishlist .icon-last{
+	display: block !important;
 }
 /*===List View===*/
 .list-grid-view .list-view-item{
