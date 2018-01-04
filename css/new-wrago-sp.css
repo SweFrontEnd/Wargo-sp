@@ -434,11 +434,11 @@ img{
     border: 1px solid #e5e5e5;
     padding-bottom: 25px;
 }
+.list-grid-view.no-slider .grid-view-item:nth-child(3n){
+	border-right: 0;
+}
 .list-grid-view.no-slider .grid-view-item{
 	margin: 0 -1px -1px 0;
-}
-.list-grid-view.no-slider .list-view-item{
-	margin: 0 -1px 60px 0;
 }
 .list-grid-view .grid-view-item .status{
 	display: none;
@@ -800,7 +800,7 @@ img{
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 50px; /* Stay at the top */
-    left: -1000px;
+    left: -100%;
     background-color: #fff; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     -webkit-transition-duration: 0.5s;
