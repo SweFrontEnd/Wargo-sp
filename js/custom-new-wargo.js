@@ -25,7 +25,7 @@ $(document).ready(function() {
     $("[data-view]").click(function() {
         var target = $(this).data("view");
         $(this).find('.icon').toggleClass('icon-wargo-grid-view icon-wargo-list-view');
-        $(target).find('li').toggleClass('list-view-item list-view-item-filter');
+        $(target).find('.grid-view-item').toggleClass('list-view-item list-view-item-filter');
         var $flexslider = $(target).find('.flexslider');
         if($flexslider.length){
             $flexslider.data('flexslider').resize();
@@ -111,8 +111,9 @@ $(document).ready(function() {
     /*===========================================================
         Header Fixed Top
     =============================================================*/
+    var topHeaderHight = $('.top-header').outerHeight();
     $(window).on('scroll', function(){
-        if($(this).scrollTop() > 50){
+        if($(this).scrollTop() > topHeaderHight){
             $('.top-header').addClass('fixed-top-header');
         }else{
             $('.top-header').removeClass('fixed-top-header');

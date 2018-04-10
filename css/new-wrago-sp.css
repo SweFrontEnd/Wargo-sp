@@ -409,7 +409,7 @@ img{
     border: 1px solid #898989;
 }
 .list-view-item .slider_pic_control .flex-control-nav{
-	bottom: 5px;
+	bottom: -30px;
 	display: flex;
 }
 .list-view-item .slider_pic_control .flex-control-nav li{
@@ -433,7 +433,9 @@ img{
             flex-direction: column;
     border: 1px solid #e5e5e5;
     padding-bottom: 25px;
-    position: relative;
+}
+.list-grid-view.no-slider .grid-view-item:nth-child(3n){
+	border-right: 0;
 }
 .list-grid-view.no-slider .grid-view-item{
 	margin: 0 -1px -1px 0;
@@ -445,7 +447,7 @@ img{
 	display: block;
 	position: absolute;
     right: 50%;
-    bottom: 8px;
+    bottom: -30px;
     padding-right: 5px;
     text-align: right;
 }
@@ -533,6 +535,10 @@ img{
 }
 .list-grid-view .grid-view-item .info .wishlist .icon-last{
 	margin-left: 5px;
+	display: none !important;
+}
+.list-grid-view .list-view-item .info .wishlist .icon-last{
+	display: block !important;
 }
 /*===List View===*/
 .list-grid-view .list-view-item{
@@ -544,6 +550,7 @@ img{
     margin: 0 0 -1px;
     border-left: none;
     border-right: none;
+    position: relative;
 }
 .list-grid-view .list-view-item .sub-item{
 	width: 24%;
@@ -711,6 +718,7 @@ img{
 /*===Box Filter===*/
 .wrap-box-filter{
 	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
 	padding: 13px 0 8px;
 	background-color: #fff;
 }
@@ -792,7 +800,7 @@ img{
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 50px; /* Stay at the top */
-    left: -1000px;
+    left: -100%;
     background-color: #fff; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     -webkit-transition-duration: 0.5s;
@@ -905,7 +913,8 @@ img{
 }
 /*===wrap-sb-menu-cate-bottom===*/
 .wrap-sb-menu-cate-bottom{
-	background-color: #1e1311; 
+	background-color: #1e1311;
+	padding-bottom: 50px; 
 }
 .list-sb-menu-cate-bt{
 	-webkit-box-orient: vertical;
@@ -1004,5 +1013,11 @@ img{
 	.slider_pic_control .flex-control-nav {
 	    bottom: -80px;
 	}
-
+	.list-grid-view.no-slider .list-view-item{
+		margin-bottom: 30px;
+	}
+	.list-view-item .slider_pic_control .flex-control-nav,
+	.list-grid-view .list-view-item .status{
+		bottom: 0;
+	}
 }
