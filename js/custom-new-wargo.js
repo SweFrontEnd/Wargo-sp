@@ -39,20 +39,14 @@ $(document).ready(function() {
     /*===========================================================
         Slider Banner Top, Slider Infomation
     =============================================================*/
-    var slider_wargo_top = function($) {
-        $('#wrapSliderBannerTop, #wrapSliderInfomation').flexslider({
-            slideshowSpeed  : 4000,
-            animationSpeed  : 400,
-            animation       : "slide",
-            directionNav    : false,
-            prevText        : "",
-            nextText        : ""
-        });
-    };
-    var timer_metaslider_wargo_top = function() {
-        !window.jQuery ? window.setTimeout(timer_metaslider_wargo_top, 100) : !jQuery.isReady ? window.setTimeout(timer_metaslider_wargo_top, 100) : slider_wargo_top(window.jQuery);
-    };
-    timer_metaslider_wargo_top();
+    $('#wrapSliderBannerTop, #wrapSliderInfomation').flexslider({
+        slideshowSpeed  : 4000,
+        animationSpeed  : 400,
+        animation       : "slide",
+        directionNav    : false,
+        prevText        : "",
+        nextText        : ""
+    });
 
 
 
@@ -144,7 +138,7 @@ $(document).ready(function() {
     $('[data-collapse-cate]').click(function(){
         var self    = this;
         var target  = $(self).data('collapse-cate');
-        var $other  = $('[data-collapse-cate="'+target+'"]');
+        var $other  = $('[data-collapse-cate="'+target+'"]');        
         if(target){
             $other.each(function(index, el){
                 if(el !== self){
